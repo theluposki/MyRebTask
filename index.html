@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+        <link rel="apple-touch-icon" href="./favicon.png">
+        <link rel="shortcut icon" href="./favicon.png">
+        <link rel="manifest" href="./manifest.json">
+        <title>MyReb Task.io</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="container">
+                <h1>{{ titulo }}</h1>
+                <hr />
+                <div class="form-task">
+                    <input  @keyup.enter="addTask()" v-model="task" id="task" type="text" placeholder="Adicionar tarefa" />
+                    <button @click="addTask()">
+                        <img src="icons/add-24px.svg" alt="add" />
+                    </button>
+                </div>
+                <div class="list-task">
+                    <ul>
+                        <li :class="item.done ? 'li-done' : ''  " :data-id="item.id" @click.stop="doneTask(item)" v-for="item in list" :key="item.id">
+                            <span>{{ item.task }}</span>
+                            <div class="controllers">
+                                <span>
+                                    <img v-if="item.done" src="icons/done-24px.svg" alt="done" />
+                                    <img @click="deleteTask(item.id)" src="icons/delete-24px.svg" alt="delete" />
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <script src="js/registerSW.js"></script>
+        
+        <script src="db/dexie.min.js"></script>
+        <script src="db/db.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{
+    "short_name":"MyReb Task.io",
+    "name":"MyReb Technology",
+    "description": "Gerenciador de Tarefas Desenvolvido por luposki",
+    "icons": [
+        {
+            "src":"./img/logo_transparent192px.png",
+            "type":"image/png",
+            "sizes":"192x192"
+        },
+        {
+            "src":"./img/logo_transparent512px.png",
+            "type":"image/png",
+            "sizes":"512x512"
+        }
+    ],
+    "start_url":"/index.html",
+    "background_color":"#1a86bd",
+    "display":"standalone",
+    "orientation":"portrait",
+    "scope": "/",
+    "theme_color": "#dcf0fa"
+}
