@@ -1,0 +1,23 @@
+{
+  "name": "MyRebTask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theluposki/MyRebTask.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theluposki/MyRebTask/issues"
+  },
+  "homepage": "https://github.com/theluposki/MyRebTask#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
